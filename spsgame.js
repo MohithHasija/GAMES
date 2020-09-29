@@ -84,6 +84,8 @@ function reset(){
 	document.getElementById("all7").value=""
 	document.getElementById("all8").value=""
 	document.getElementById("all9").value=""
+	
+	document.getElementById("count").innerHTML=0
 
 	document.getElementById("results").innerHTML=""
 }
