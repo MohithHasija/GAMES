@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SPS game</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="spsgame.js"></script>
+	<style type="text/css">
+		body { 
+				background-image:url('spsgame.mp4'); 
+				background-repeat:repeat;
+			 }
+
+		.bg-danger {
+    			background-color: #285b90;
+			}
+			input{
+				background-color:white;
+				width: 50px;
+				height: 50px;
+				font-size: 20px;
+				text-align: center;
+
+			}
+
+
+	</style>
+</head>
+
+<body class="bg-danger">
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Stone Paper Scissor</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Tic Tac Toe</a></li>
+      <li><a href="#">Snake and ladder</a></li>
+      <li><a href="#">Hangman</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+	<div class="container">
+		<h1 class=" well">Stone Paper Scissor Game</h1>
+	</div>
+	<div class="container">
+		<center>
+		<button type="button" class="btn btn-warning col-sm-4"><h1 id="stone" onclick="game(0)">Stone</h1></button>
+  		<button type="button" class="btn btn-danger col-sm-4"><h1 id="paper" onclick="game(1)">Paper</h1></button>
+  		<button type="button" class="btn btn-success col-sm-4"><h1 id="scissor" onclick="game(2)">Scissor</h1></button> 
+  		</center>
+		
+	</div>
+<br>
+	<div class="container">
+		<h1 class=" well">Tic Tac Toe Game</h1>
+	</div>
+	<div class="container">
+		<center>
+				<p id="count" style="display: none;">0</p> 
+				<div class="all">
+				  <input id="all1" oninput="check()" placeholder="#" type="text"></input>
+				  <input id="all2" oninput="check()" placeholder="#" type="text"></input>
+				  <input id="all3" oninput="check()" placeholder="#" type="text"></input>
+				</div>
+
+				<div class="all">
+				  <input id="all4" oninput="check()" placeholder="#" type="text"></input>
+				  <input id="all5" oninput="check()" placeholder="#" type="text"></input>
+				  <input id="all6" oninput="check()" placeholder="#" type="text"></input>
+				</div>
+
+				<div class="all">
+				  <input id="all7" oninput="check()" placeholder="#" type="text"></input>
+				  <input id="all8" oninput="check()" placeholder="#" type="text"></input>
+				  <input id="all9" oninput="check()" placeholder="#" type="text"></input>
+				</div>
+
+				<h1 id="results"></h1>
+				<center>
+				
+  				<button type="button"  onclick="reset()" class="btn btn-danger col-sm-12"><h1 id="scissor">RESET GAME</h1></button> 
+				</center>
+				
+
+		</center>
+	</div>
+	
+	
+</body>
+</html>
