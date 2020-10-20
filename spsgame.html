@@ -13,7 +13,7 @@
 	<script src="spsgame.js"></script>
 	<style type="text/css">
 		body { 
-				background-image:url('spsgame.mp4'); 
+				
 				background-repeat:repeat;
 			 }
 
@@ -26,21 +26,50 @@
 				height: 50px;
 				font-size: 20px;
 				text-align: center;
+				
+			}
+
+			#movie{
+				background-color:white;
+				width: 250px;
+				height: 50px;
+				font-size: 20px;
+				text-align: center;
+			}
+
+			.topic{
+				color: white;
+				font-size: 25px;
+				display: block;
+			}
+			#hangman{
+				height: 300px;
+				border: 1px solid black;
+				margin-bottom: 21px;
+				overflow: auto;
+			}
+			#letter{
+				width: 250px;
+			}
+
+			.container{
+				border:solid 2px black;
+				padding: 20px;
+				box-shadow: 5px 10px 18px black;
 
 			}
 
-
 	</style>
 </head>
-
+<!--This is menu bar-->
 <body class="bg-danger">
 	<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Stone Paper Scissor</a>
+      <a class="navbar-brand" href="#">GAMES</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Stone Paper Scissor</a></li>
       <li><a href="#">Tic Tac Toe</a></li>
       <li><a href="#">Snake and ladder</a></li>
       <li><a href="#">Hangman</a></li>
@@ -48,11 +77,11 @@
   </div>
 </nav>
 
-
+<!--This is SPS Game-->
 	<div class="container">
 		<h1 class=" well">Stone Paper Scissor Game</h1>
-	</div>
-	<div class="container">
+	
+	
 		<center>
 		<button type="button" class="btn btn-warning col-sm-4"><h1 id="stone" onclick="game(0)">Stone</h1></button>
   		<button type="button" class="btn btn-danger col-sm-4"><h1 id="paper" onclick="game(1)">Paper</h1></button>
@@ -60,11 +89,14 @@
   		</center>
 		
 	</div>
+
 <br>
+
+<!--This is tic tac toe game-->
 	<div class="container">
 		<h1 class=" well">Tic Tac Toe Game</h1>
-	</div>
-	<div class="container">
+	
+	
 		<center>
 				<p id="count" style="display: none;">0</p> 
 				<div class="all">
@@ -93,6 +125,35 @@
 				
 
 		</center>
+	</div>
+
+<br>
+	<div class="container">
+		
+			<h1 class=" well">HANGMAN Game</h1>
+			<p class="topic">Enter the word:</p>
+	        <input  id="movie" onclick="play()"></input>
+	        <br>
+	        <br>
+	        <p id="secret" style="display: none;"></p>
+	        <p id="count1" style="display: none;"></p>
+
+	        <div id="hangman">
+
+	        	<p class="topic btn btn-success" id="showme" style="visibility: hidden;">Friends! Start guessing (Only 7 guess)</p>
+	        	<p class="topic">Enter the Letter here:</p>
+	        	<input  id="letter" style="visibility: hidden;" onclick="search()"></input>
+
+	        <center>
+	        	<p class="topic" id="show"></p>
+	        	<h1 style="color: white; border-bottom:solid 2px white; display: inline;" id="message"></h1>
+	        	<h2 style="color: white;" id="seeans"></h2>
+	        </center>
+
+	        
+
+	        </div>
+
 	</div>
 	
 	
